@@ -166,7 +166,7 @@ class HomeController extends Controller
             $product=Product::join('danhgia','danhgia.id_product','=','product.id')->where('status','1')->where('name','like','%'.$keywords.'%')->where('brand_id','like','%'.$brand_select.'%')->where('category_id','like','%'.$cate_select.'%')->select('product.*','danhgia.id as id_rate','one_rate','two_rate','three_rate','four_rate','five_rate')->paginate(12)->appends(request()->query());
         }
          $km=Khuyenmai::join('chitiet_khuyenmai','khuyenmai.id','=','chitiet_khuyenmai.khuyenmai_id')->select('ngaybatdau','ngayketthuc','discount','product_id')->orderby('khuyenmai.id','asc')->get();
-         return view('pages.home.search')->with('product',$product)->with('khuyenmai',$km)->with('keywords',$keywords)->with('price_select',$price_select)->with('select',$select)->with('orderby',$orderby)->with('brand',$brand)->with('brand_select',$brand_select)->with('cate',$cate)->with('cate_select',$cate_select);    
+         return view('pages.home.search')->with('product',$product)->with('khuyenmai',$km)->with('keywords',$keywords)->with('price_select',$price_select)->with('select',$select)->with('orderby',$orderby)->with('brand',$brand)->with('brand_select',$brand_select)->with('cate',$cate)->with('cate_select',$cate_select);
    }
 
 }

@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use DB;
 use Session;
 use App\model\frontend\Product;
-session_start();
 class CartController extends Controller
 {
       public function show_cart(){
