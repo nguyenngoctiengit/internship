@@ -140,11 +140,7 @@ a, a:visited, a:active{
           <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-success">
-              @if($product_ban_1st!=null)
                <h3 style="text-align: center;">{{$product_ban_1st->totalSLBan}}</h3>
-               @else
-                <h3 style="text-align: center;">0</h3>
-               @endif
               <div class="inner">
                 <p>Số lượng bán cao nhất</p>
               </div>
